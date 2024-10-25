@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ValuableGoose_Assignment08", "ValuableGoose_Assignment08\ValuableGoose_Assignment08.pyproj", "{D385757D-1661-4079-8A93-7DF5BD3A75D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D385757D-1661-4079-8A93-7DF5BD3A75D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D385757D-1661-4079-8A93-7DF5BD3A75D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE64ED2-9A69-4B6D-A9A0-FE4039A83265}
+	EndGlobalSection
+EndGlobal
