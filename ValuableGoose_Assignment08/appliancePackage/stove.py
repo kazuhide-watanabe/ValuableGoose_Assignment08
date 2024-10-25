@@ -7,55 +7,85 @@
 # Due Date:  10/31/2024
 # Course #/Section: IS 4010/001 
 # Semester/Year:   Fall/2024
-# Brief Description of the assignment:  
-# Citations: In class notes
-# Anything else that's relevant:   
+# Brief Description of the assignment: Group project where each member creates a class to be called to the main module.
+# Brief Description of what this module does: Creates a class called stove that gets and sets the stove status and heat level
+#then prints the current state of both. Includes error handling
+# Citations: In class work, Bill Nicholson
+# Anything else that's relevant: This Class was assigned to Alex Carnes
 #**********************************
 
 # Stove.py
 
-class Vehicle(object):
+class Stove(object):
     """
-    Model a vehicle for sale by a retail operation. This is a very incomplete model.
+    Model a stove being turned on and set to a specific heat level. The stove starts off with a heat level of none. It can 
+    be turned on and set to three heat levels: low, medium, and high.
     """
-    def __init__(self, type):
+    def __init__(self):
         """
-        Constructor (duh)
-        @param type String: The type of vehicle
-        
+        Creates the starting point for the stove. The stove starts off with a heat level of none.
         """
-        self.__type = type
+        self.__status = 'off'
+        self.__stoveLevel = 'none'
 
-    def get_type(self):
+    def get_status(self):
         """
-        @return String: The vehicle type of the current object
+        Get the current status of the stove.
+        @return String: The current status of the Stove. Is it on?
         """
-        return self.__type
+        return self.__status
     
-    def set_type(self, type):
+    def set_status(self, status):
         """
-        Assign a value to the vehicle type of the current object
-        @param type String: The vehicle type to be assigned.
+        Set the status of the stove to on or off.
+        @param status String: The stove status to be assigned.
+        @raise value error: If status isn't on or off
         """
-        self.__type = type
+        if status in ["on", "off"]:
+            self.status = status
+            if self.__status == "off":
+                self.__stoveLevel = "none"
+        else:
+            raise ValueError("The Stove's Status can only be 'on' or 'off'.")
+     
+    def get_stoveLevel(self):
+        """
+        Get the current heat level of the stove.
+        @return String: The current heat level of the stove, is it none, low, medium, or high?
+        """
+        return self.__stoveLevel
+    
+    def set_stoveLevel(self, level):
+        """
+        Set a heat level to the stove.
+        @param level String: The appliance heat level to be assigned 
+        @raise value error: If heat level isn't low, medium, or high, or if the stove is off
+        """
+        if self.__status == "off":
+            raise ValueError("The heat level cannot be set while the Stove is off")
+            if level in ["low", "medium", "high"]:
+                self.__stoveLevel = level
+            else:
+                raise ValueError("Stove level can only be equal to low, medium, or high")
+                
         
-    def print_type(self):
+    def print_statusLevel(self):
         """
-        Print the vehicle type of the current object
+        Print the current status and heat level of the stove
+        @print str:the current status and the heat level of the stove
         """
-        print(self.__type)
+        print(f"The Stove is {self.__status} and the heat level is set to {self.__stoveLevel}.")
         
-    def __str__(self):
+
+   # def __str__(self):
         """
         @return String: A human-readable basic representation of the current object. 
         Useful for debugging, documentation, etc.
         """
-        return "type: " + self.__type
+      #  return "stove status: " + self.__type
 
-    def __repr__(self):
+ #   def __repr__(self):
         """
         @return String: A string containing code that can be executed to create a copy of the current object
         """
-        return f"Vehicle('{self.__type}')"
-
-
+      #  return f"Vehicle('{self.__type}')"
