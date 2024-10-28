@@ -21,7 +21,7 @@ class Stove(object):
     Model a stove being turned on and set to a specific heat level. The stove starts off with a heat level of none. It can 
     be turned on and set to three heat levels: low, medium, and high.
     """
-    def __init__(self):
+    def __init__(self, status):
         """
         Creates the starting point for the stove. The stove starts off with a heat level of none.
         """
@@ -89,4 +89,7 @@ class Stove(object):
         """
         @return String: A string containing code that can be executed to create a copy of the current object
         """
-        return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
+        return f"Stove ('{self.__status}')"
+    
+    
+    

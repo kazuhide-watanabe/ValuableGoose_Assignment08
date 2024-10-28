@@ -19,7 +19,7 @@ from appliancePackage.stove import Stove
 
 if __name__ == "__main__":
    # Create an instance of the Stove class
-    stove = Stove()
+    stove = Stove("off")
 
     # Invoke non-dunder methods
     # Set the stove status to "on" and change the heat setting
@@ -52,4 +52,8 @@ if __name__ == "__main__":
     # Invoke dunder methods
     print("\n\nTesting the str and repr method...")
     print("String representation (__str__):", str(stove))  
-    print("Developer representation (__repr__):", repr(stove))
+    
+    print("From __repr__():", stove.__repr__())
+    newStove = eval(stove.__repr__())
+    print("New Stove:", newStove.__str__())
+    
