@@ -77,16 +77,16 @@ class Stove(object):
         """
         return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
         
-
-   # def __str__(self):
+    #documentation needs to be edited
+    def __str__(self):
         """
         @return String: A human-readable basic representation of the current object. 
         Useful for debugging, documentation, etc.
         """
-      #  return "stove status: " + self.__type
-
- #   def __repr__(self):
+        return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
+    # documentation needs to be edited
+    def __repr__(self):
         """
         @return String: A string containing code that can be executed to create a copy of the current object
         """
-      #  return f"Vehicle('{self.__type}')"
+        return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
