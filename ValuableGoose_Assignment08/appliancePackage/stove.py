@@ -42,7 +42,7 @@ class Stove(object):
         @raise value error: If status isn't on or off
         """
         if status in ["on", "off"]:
-            self.status = status
+            self.__status = status
             if self.__status == "off":
                 self.__stoveLevel = "none"
         else:
@@ -61,20 +61,21 @@ class Stove(object):
         @param level String: The appliance heat level to be assigned 
         @raise value error: If heat level isn't low, medium, or high, or if the stove is off
         """
-        if self.__status == "off":
+        if self.__status != "on":
             raise ValueError("The heat level cannot be set while the Stove is off")
-            if level in ["low", "medium", "high"]:
-                self.__stoveLevel = level
-            else:
-                raise ValueError("Stove level can only be equal to low, medium, or high")
+        
+        if level in ["low", "medium", "high"]:
+            self.__stoveLevel = level
+        else:
+            raise ValueError("Stove level can only be equal to low, medium, or high")
                 
         
-    def print_statusLevel(self):
+    def show_statusLevel(self):
         """
         Print the current status and heat level of the stove
         @print str:the current status and the heat level of the stove
         """
-        print(f"The Stove is {self.__status} and the heat level is set to {self.__stoveLevel}.")
+        return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
         
 
    # def __str__(self):
