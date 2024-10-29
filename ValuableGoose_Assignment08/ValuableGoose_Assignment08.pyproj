@@ -24,7 +24,7 @@
     <Compile Include="appliancePackage\Stove.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="appliancePackage\Freezer.py" />
+    <Compile Include="appliancePackage\Fridge.py" />
     <Compile Include="appliancePackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
