@@ -12,51 +12,42 @@
 # Anything else that's relevant:   
 #**********************************
 
-# Freezer.py
+# Fridge.py
 
-class Vehicle(object):
+class Fridge(object):
     """
-    Model a vehicle for sale by a retail operation. This is a very incomplete model.
+   Model a fridge that can change temperature between 30 and 40 degrees Farenheit 
     """
-    def __init__(self, type):
+    def __init__(self, temp):
         """
-        Constructor (duh)
-        @param type String: The type of vehicle
-        
+       Creates a starting point for the fridge once it is plugged in and sets it to the default 
+       temperature of 37 degrees Fahrenheit
         """
-        self.__type = type
+        self.__temp = "37 degrees Fahrenheit"
 
-    def get_type(self):
-        """
-        @return String: The vehicle type of the current object
-        """
-        return self.__type
+    # gets the current temperature of the stove
+    def get_fridgeTemp(self):
+     
+        return self.__temp
     
-    def set_type(self, type):
-        """
-        Assign a value to the vehicle type of the current object
-        @param type String: The vehicle type to be assigned.
-        """
-        self.__type = type
-        
-    def print_type(self):
-        """
-        Print the vehicle type of the current object
-        """
-        print(self.__type)
-        
+    # sets the fridge temperature
+    def set_FridgeTemp(self, temp):
+        tempRange = range(30,41)
+        if temp in (tempRange):
+            self.__ = temp
+        else:
+            print("Temperature cannot go out of 30-40 degrees Fahrenheit range")
+
     def __str__(self):
-        """
-        @return String: A human-readable basic representation of the current object. 
-        Useful for debugging, documentation, etc.
-        """
-        return "type: " + self.__type
+         return f"Fridge is {self.__temp}."
 
     def __repr__(self):
-        """
-        @return String: A string containing code that can be executed to create a copy of the current object
-        """
-        return f"Vehicle('{self.__type}')"
+         return f"Fridge ('{self.__temp}')"
+
+     
+        
+        
+
 
 
 
