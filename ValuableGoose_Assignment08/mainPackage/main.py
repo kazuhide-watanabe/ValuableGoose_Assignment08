@@ -8,10 +8,10 @@
 # Course #/Section: IS 4010/001 
 # Semester/Year:   Fall/2024
 # Brief Description of the assignment: Group project where each member creates a class to be called to the main module.
-# Brief Description of what this module does: Creates a class called stove that gets and sets the stove status and heat level
-#then prints the current state of both. Includes error handling 
-# Citations: In class notes
-# Anything else that's relevant:   
+# Brief Description of what this module does: This module imports the Stove and Fridge file. 
+# It then creates and instance of the classes, invokes the non-dunder and dunder methods testing normal and exception cases of using the class. 
+# Citations: In class notes, Bill Nicholson 
+# Anything else that's relevant: This python file was assigned to Kazuhide Watanabe
 #**********************************
 
 # main.py
