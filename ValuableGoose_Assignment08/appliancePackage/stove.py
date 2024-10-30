@@ -87,7 +87,7 @@ class Stove(object):
 
     def __repr__(self):
         """
-
+        Returns a formal string representation of the Stove object, including its current status.
         @return String: A string containing the status code that can be executed to create a copy of the current object
         """
         return f"Stove ('{self.__status}')"
