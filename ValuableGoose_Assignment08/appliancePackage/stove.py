@@ -24,6 +24,7 @@ class Stove(object):
     def __init__(self, status):
         """
         Creates the starting point for the stove. The stove starts off with a heat level of none.
+        @param type String: The status of the stove
         """
         self.__status = 'off'
         self.__stoveLevel = 'none'
@@ -77,17 +78,17 @@ class Stove(object):
         """
         return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
         
-    #documentation needs to be edited
     def __str__(self):
         """
-        @return String: A human-readable basic representation of the current object. 
-        Useful for debugging, documentation, etc.
+        Returns a string representation of the stove status and level.
+        @return String: A human-readable basic representation of the current object.
         """
         return f"Stove is {self.__status} and the heat level is set to {self.__stoveLevel}."
-    # documentation needs to be edited
+
     def __repr__(self):
         """
-        @return String: A string containing code that can be executed to create a copy of the current object
+
+        @return String: A string containing the status code that can be executed to create a copy of the current object
         """
         return f"Stove ('{self.__status}')"
     
